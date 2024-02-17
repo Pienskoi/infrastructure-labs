@@ -1,10 +1,21 @@
 body {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100vh;
     margin: 0;
     background-color: #f4f4f4;
+}
+
+.team-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.lab-title {
+    font-size: 18px;
+    margin-bottom: 20px;
 }
 
 .person-container {
@@ -25,4 +36,3 @@ body {
 .person h2 {
     margin: 10px 0;
 }
-
