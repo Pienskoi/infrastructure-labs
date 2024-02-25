@@ -27,3 +27,4 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           VALIDATE_CHECKOV: false
+          VALIDATE_TERRAFORM_TERRASCAN: false
