@@ -64,7 +64,7 @@ resource "aws_instance" "kpi-lab2-server" {
 
     sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y
 
-    sudo docker run -p 80:80 --restart always --name lab2 pienskoi/webapp:latest
+    sudo docker run -d -p 80:80 --restart always --name lab2 pienskoi/webapp:latest
     sudo docker run -d --restart always --name watchtower -v /var/run/docker.sock:/var/run/docker.sock -e WATCHTOWER_POLL_INTERVAL=60 containrrr/watchtower
 
     EOF
