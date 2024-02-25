@@ -78,3 +78,14 @@ resource "aws_instance" "kpi-lab2-server" {
 output "ec2-public-url" {
   value = aws_instance.kpi-lab2-server.public_dns
 }
+
+resource "aws_instance" "kpi-lab2-server-2" {
+  ami             = "ami-0faab6bdbac9486fb"
+  instance_type   = "t2.micro"
+  key_name        = aws_key_pair.kpi-lab2.key_name
+  security_groups = [aws_security_group.kpi-labs-sg.name]
+  tags = {
+    Project = "KPI infrastructure labs"
+  }
+
+}
